@@ -28,8 +28,10 @@ description
 __version__ = '$Revision$'
 
 import logging
-
+from time import sleep
 from recorddetail4 import RecordDetail
+
+logging.basicConfig(level=logging.INFO)
 
 LOG = logging.getLogger(__name__)
 
@@ -48,6 +50,7 @@ class MyProcess():
     def step_two(self):
         LOG.info('Doing step two')
         self.numbers = [n * 2 for n in self.numbers]
+        sleep(1)
 
     @RecordDetail('three')
     def step_three(self):
@@ -63,6 +66,5 @@ class MyProcess():
         LOG.info(self.numbers)
 
 if __name__ == '__main__':
-    logging.basicConfig(level=logging.INFO)
     process = MyProcess()
     process.run()

@@ -45,6 +45,8 @@ class RecordDetail(object):
         @wraps(func)
         def wrapper(*args, **kwargs):
             status = 0
+            # Need to set this now when the function is called, not when the decorator is evaluated
+            self.start_time = datetime.datetime.now()
             try:
                 args += (self,)
                 result = func(*args, **kwargs)

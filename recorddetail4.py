@@ -23,6 +23,7 @@ class RecordDetail(object):
         self.stop_time = None
         self.number_of_records = None
         self.other_details = None
+        LOG.info('__init__')
 
     def save(self,):
         # Do stuff to write to database
@@ -38,8 +39,11 @@ class RecordDetail(object):
         self.save()
 
     def __call__(self, func):
+
         @wraps(func)
         def wrapper(*args, **kwargs):
+            # Need to set this now when the function is called, not when the decorator is evaluated
+            self.start_time = datetime.datetime.now()
             result = func(*args, **kwargs)
             self.stop(0)
             return result

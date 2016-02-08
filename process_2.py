@@ -12,7 +12,7 @@ description
 __version__ = '$Revision$'
 
 import logging
-
+from time import sleep
 from recorddetail import RecordDetail
 
 LOG = logging.getLogger(__name__)
@@ -33,6 +33,7 @@ class MyProcess():
         detail = RecordDetail('two')
         LOG.info('Doing step two')
         self.numbers = [n * 2 for n in self.numbers]
+        sleep(1)
         detail.stop(0)
 
     def step_three(self):
