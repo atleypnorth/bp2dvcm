@@ -1,32 +1,3 @@
-"""
-HeadURL:  $HeadURL$
-Last changed by:  $Author$
-Last changed on:  $Date$
-
-(c)  2015 BlackRock.  All rights reserved.
-
-Description:
-
-description
-"""
-__version__ = '$Revision$'
-
-
-if __name__ == '__main__':
-    pass
-"""
-HeadURL:  $HeadURL$
-Last changed by:  $Author$
-Last changed on:  $Date$
-
-(c)  2015 BlackRock.  All rights reserved.
-
-Description:
-
-description
-"""
-__version__ = '$Revision$'
-
 import logging
 from time import sleep
 from recorddetail3 import RecordDetail, record_detail

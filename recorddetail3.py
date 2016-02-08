@@ -1,12 +1,3 @@
-"""
-HeadURL:  $HeadURL$
-Last changed by:  $Author$
-Last changed on:  $Date$
-
-(c)  2015 BlackRock.  All rights reserved.
-"""
-__version__ = '$Revision$'
-
 import datetime
 from contextlib import contextmanager
 import logging
