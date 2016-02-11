@@ -3,4 +3,4 @@ try:
     for line in f:
         print(line)
 finally:
-    close(f)
+    f.close()
