@@ -28,6 +28,14 @@ class RecordDetail(object):
         self.stop_time = datetime.datetime.now()
         self.save()
 
+    def __enter__(self,):
+        self.save()
+
+    def __exit__(self, etype, evalue, etrace):
+        self.stop(0)
+        # rethrow any exception (set to True to swallow it ...)
+        return False
+
 
 @contextmanager
 def record_detail(name):

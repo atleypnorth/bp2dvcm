@@ -22,9 +22,9 @@ class MyProcess():
             sleep(1)
 
     def step_three(self):
-        with record_detail('three'):
+        with RecordDetail('three'):
             LOG.info('Doing step three')
-            self.numbers = [(n - 2) / 2 for n in self.numbers]
+            self.numbers = [(n - 2) / (n - 4) for n in self.numbers]
 
     def run(self):
         self.step_one()
