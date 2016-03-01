@@ -29,7 +29,8 @@ class MyProcess():
         LOG.info('Doing step three')
         self.numbers = [n / (n - 4) for n in self.numbers]
 
-    def run(self):
+    @RecordDetail()
+    def run(self, detail):
         self.step_one()
         LOG.info(self.numbers)
         self.step_two()

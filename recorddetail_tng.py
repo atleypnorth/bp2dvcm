@@ -67,6 +67,8 @@ class RecordDetail(object):
 
     def __call__(self, something):
         LOG.info(something)
+
+        # NOTE : something might be callable as well so check if it is a type (class) first
         if isinstance(something, type):
             return self._wrap_class_functions(something)
         if callable(something):
