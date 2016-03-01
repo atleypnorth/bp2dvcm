@@ -1,6 +1,6 @@
 import datetime
-from logging import getLogger
 from functools import wraps
+from logging import getLogger
 
 LOG = getLogger(__name__)
 

@@ -2,6 +2,7 @@ from unittest.mock import patch
 from recorddetail3 import RecordDetail
 import logging
 
+
 class MyClass():
 
     def __init__(self):

@@ -1,8 +1,8 @@
 import datetime
 from contextlib import contextmanager
-import logging
+from logging import getLogger
 
-LOG = logging.getLogger(__name__)
+LOG = getLogger(__name__)
 
 
 class RecordDetail(object):
