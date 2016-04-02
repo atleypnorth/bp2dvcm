@@ -39,3 +39,11 @@ class RecordDetail(object):
             self.stop(0)
             return result
         return wrapper
+
+
+
+
+
+
+
+

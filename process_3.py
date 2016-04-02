@@ -11,8 +11,8 @@ class MyProcess():
         self.numbers = list(range(0, 10))
 
     def step_one(self):
-        with record_detail('one'):
-            LOG.info('Doing step one')
+        with record_detail('one') as d:
+            LOG.info('Doing step one with %s', type(d))
             self.numbers = [n + 2 for n in self.numbers]
 
     def step_two(self):
@@ -22,8 +22,8 @@ class MyProcess():
             sleep(1)
 
     def step_three(self):
-        with RecordDetail('three'):
-            LOG.info('Doing step three')
+        with RecordDetail('three') as d:
+            LOG.info('Doing step three with %s', type(d))
             self.numbers = [(n - 2) / (n - 4) for n in self.numbers]
 
     def run(self):

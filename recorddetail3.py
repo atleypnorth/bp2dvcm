@@ -14,6 +14,7 @@ class RecordDetail(object):
         self.stop_time = None
         self.number_of_records = None
         self.other_details = None
+        LOG.info('___INIT__')
 
     def save(self,):
         # Do stuff to write to database
@@ -29,7 +30,10 @@ class RecordDetail(object):
         self.save()
 
     def __enter__(self,):
+        LOG.info('__ENTER__')
         self.save()
+        # Return value is used if you with ... as VAR
+        return self
 
     def __exit__(self, etype, evalue, etrace):
         self.stop(0)
@@ -43,3 +47,16 @@ def record_detail(name):
     detail.save()
     yield detail
     detail.stop(0)
+
+
+
+
+
+
+
+
+
+
+
+
+
